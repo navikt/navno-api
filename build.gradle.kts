@@ -5,9 +5,10 @@ plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
     kotlin("jvm").version(Kotlin.version)
     kotlin("plugin.allopen").version(Kotlin.version)
+    kotlin("plugin.serialization").version(Kotlin.version)
 
     id(Shadow.pluginId) version (Shadow.version)
-    // Apply the application plugin to add support for building a CLI application.
+    id(Versions.pluginId) version Versions.version // ./gradlew dependencyUpdates to check for new versions
     application
 }
 
@@ -16,10 +17,8 @@ tasks.withType<KotlinCompile> {
 }
 
 repositories {
-    mavenCentral()
-    maven("https://packages.confluent.io/maven")
     maven("https://jitpack.io")
-    mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
@@ -42,18 +41,9 @@ dependencies {
     implementation(Ktor.serialization)
     implementation(Logback.classic)
     implementation(Logstash.logbackEncoder)
-
-    testImplementation(Junit.api)
-    testImplementation(Ktor.clientMock)
-    testImplementation(Ktor.clientMockJvm)
-    testImplementation(Kluent.kluent)
-    testImplementation(Mockk.mockk)
-    testImplementation(Jjwt.api)
-
-    testRuntimeOnly(Bouncycastle.bcprovJdk15on)
-    testRuntimeOnly(Jjwt.impl)
-    testRuntimeOnly(Jjwt.jackson)
-    testRuntimeOnly(Junit.engine)
+    implementation(TmsKtorTokenSupport.tokenXValidation)
+    implementation(TmsKtorTokenSupport.authenticationInstaller)
+    implementation(TmsKtorTokenSupport.tokendingsExchange)
 }
 
 application {
@@ -73,7 +63,7 @@ tasks {
 
         environment("CORS_ALLOWED_ORIGINS", "localhost:9002")
 
-        environment("NAIS_CLUSTER_NAME", "dev-sbs")
+        environment("NAIS_CLUSTER_NAME", "dev-gcp")
         environment("NAIS_NAMESPACE", "personbruker")
 
         main = application.mainClassName
