@@ -5,7 +5,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: dev-fss:personbruker
+    environment: dev-gcp:personbruker
     env:
       version: ghcr.io/${{ github.repository }}:${{ github.sha }}
     steps:
@@ -34,11 +34,11 @@ jobs:
         run: |
           docker build -t ${{ env.version }} .
           docker push ${{ env.version }}
-      - name: Deploy to dev-fss
+      - name: Deploy to dev-gcp
         uses: nais/deploy/actions/deploy@master
         env:
-          CLUSTER: dev-fss
+          CLUSTER: dev-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           RESOURCE: ./nais/nais.yaml
           VAR: version=${{ env.version }}
-          VARS: ./nais/dev-fss/personbruker.json
+          VARS: ./nais/dev-gcp/personbruker.json
