@@ -26,7 +26,7 @@ spec:
          {{/each}}
   envFrom:
     - configmap: loginservice-idporten
-    - secret: innloggingsstatus-secret
+    - secret: navno-api-secret
   resources:
     limits:
       cpu: "3"
