@@ -1,6 +1,6 @@
-package no.nav.tms.template.config
+package no.nav.navno.api.config
 
-import no.nav.tms.template.health.HealthService
+import no.nav.navno.api.health.HealthService
 
 class ApplicationContext {
 

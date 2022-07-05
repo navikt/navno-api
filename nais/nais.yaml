@@ -1,0 +1,36 @@
+apiVersion: "nais.io/v1alpha1"
+kind: "Application"
+metadata:
+  name: navno-api
+  namespace: personbruker
+  labels:
+    team: personbruker
+spec:
+  image: {{version}}
+  port: 8080
+  liveness:
+    path: /internal/isAlive
+    initialDelay: 10
+  readiness:
+    path: /internal/isReady
+    initialDelay: 10
+  replicas:
+    min: 2
+    max: 4
+  webproxy: true
+  tokenx:
+    enabled: true
+  ingresses:
+  {{#each ingresses}}
+     - "{{this}}"
+         {{/each}}
+  envFrom:
+    - configmap: loginservice-idporten
+    - secret: innloggingsstatus-secret
+  resources:
+    limits:
+      cpu: "3"
+      memory: 768Mi
+    requests:
+      cpu: "500m"
+      memory: 384Mi

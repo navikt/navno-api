@@ -1,4 +1,4 @@
-package no.nav.tms.template.config
+package no.nav.navno.api.config
 
 import kotlinx.serialization.json.Json
 
