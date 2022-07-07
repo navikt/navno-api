@@ -8,12 +8,6 @@ class TokenxService(val tokendingsService: TokendingsService, val OIDC_COOKIE_NA
 
     suspend fun exchangeAuthToken(request: ApplicationRequest, targetApp: String): String {
         val selvbetjeningIdtoken = request.cookies[OIDC_COOKIE_NAME]!!
-        val token =
-            if (selvbetjeningIdtoken.startsWith("Bearer ")) selvbetjeningIdtoken.substring(
-                7,
-                selvbetjeningIdtoken.length
-            )
-            else selvbetjeningIdtoken
-        return tokendingsService.exchangeToken(token, targetApp)
+        return tokendingsService.exchangeToken(selvbetjeningIdtoken, targetApp)
     }
 }
