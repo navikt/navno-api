@@ -20,6 +20,10 @@ spec:
   webproxy: true
   tokenx:
     enabled: true
+  accessPolicy:
+    rules:
+      - application: meldekort-api
+        namespace: meldekort
   ingresses:
   {{#each ingresses}}
      - "{{this}}"
