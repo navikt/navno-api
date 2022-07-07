@@ -1,11 +1,13 @@
 package no.nav.navno.api.meldekort.dto
 
+import kotlinx.serialization.Serializable
 import java.time.LocalDate
 
+@Serializable
 data class Meldekortstatus(
     val meldekort: Int = 0,
     val etterregistrerteMeldekort: Int = 0,
     val antallGjenstaaendeFeriedager: Int = 0,
     val nesteMeldekort: Meldekort? = null,
-    val nesteInnsendingAvMeldekort: LocalDate? = null,
+    @Serializable(with = MeldekortLocalDateSerializer::class) val nesteInnsendingAvMeldekort: LocalDate? = null,
 )
