@@ -2,9 +2,9 @@ package no.nav.navno.api.config
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.apache.Apache
-import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.HttpTimeout
-import io.ktor.client.features.json.serializer.*
+import io.ktor.client.features.json.JsonFeature
+import io.ktor.client.features.json.serializer.KotlinxSerializer
 
 object HttpClientBuilder {
 
@@ -14,6 +14,7 @@ object HttpClientBuilder {
                 serializer = jsonSerializer
             }
             install(HttpTimeout)
+            expectSuccess = false
         }
     }
 

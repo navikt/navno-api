@@ -15,13 +15,13 @@ object Jackson {
 }
 
 object Kotlin {
-    const val version = "1.6.21"
+    const val version = "1.7.10"
 }
 
 object Kotlinx {
     private const val groupId = "org.jetbrains.kotlinx"
 
-    const val coroutines = "$groupId:kotlinx-coroutines-core:1.6.2"
+    const val coroutines = "$groupId:kotlinx-coroutines-core:1.6.3"
     const val htmlJvm = "$groupId:kotlinx-html-jvm:0.7.5"
 }
 
@@ -53,6 +53,11 @@ object Logstash {
     const val logbackEncoder = "net.logstash.logback:logstash-logback-encoder:$version"
 }
 
+object NAV {
+    private const val version = "2.1.1"
+    const val tokenValidatorKtor = "no.nav.security:token-validation-ktor:$version"
+}
+
 object Shadow {
     const val version = "7.1.2"
     const val pluginId = "com.github.johnrengelman.shadow"
@@ -62,9 +67,7 @@ object TmsKtorTokenSupport {
     private const val version = "2022.05.19-09.32-5076b2435b0a"
     private const val groupId = "com.github.navikt.tms-ktor-token-support"
 
-    const val authenticationInstaller = "$groupId:token-support-authentication-installer:$version"
     const val tokendingsExchange = "$groupId:token-support-tokendings-exchange:$version"
-    const val tokenXValidation = "$groupId:token-support-tokenx-validation:$version"
 }
 
 object Versions {

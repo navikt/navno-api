@@ -17,8 +17,8 @@ tasks.withType<KotlinCompile> {
 }
 
 repositories {
-    maven("https://jitpack.io")
     mavenCentral()
+    maven("https://jitpack.io")
 }
 
 dependencies {
@@ -41,8 +41,7 @@ dependencies {
     implementation(Ktor.serialization)
     implementation(Logback.classic)
     implementation(Logstash.logbackEncoder)
-    implementation(TmsKtorTokenSupport.tokenXValidation)
-    implementation(TmsKtorTokenSupport.authenticationInstaller)
+    implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
 }
 
