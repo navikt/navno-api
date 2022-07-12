@@ -7,9 +7,12 @@ import io.ktor.auth.Authentication
 import io.ktor.auth.authenticate
 import io.ktor.client.HttpClient
 import io.ktor.features.CORS
+import io.ktor.features.CallLogging
 import io.ktor.features.ContentNegotiation
 import io.ktor.features.DefaultHeaders
 import io.ktor.http.HttpHeaders
+import io.ktor.request.httpMethod
+import io.ktor.request.path
 import io.ktor.routing.routing
 import io.ktor.serialization.json
 import no.nav.navno.api.health.healthApi
@@ -29,6 +32,18 @@ fun Application.mainModule(appContext: ApplicationContext = ApplicationContext()
 
     install(ContentNegotiation) {
         json(jsonConfig())
+    }
+
+    install(CallLogging) {
+        filter { call ->
+            !call.request.path().startsWith("/internal")
+        }
+        format { call ->
+            val status = call.response.status()
+            val httpMethod = call.request.httpMethod.value
+            val path = call.request.path()
+            "$status - $httpMethod $path"
+        }
     }
 
     val conf = this.environment.config
