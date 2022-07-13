@@ -25,7 +25,7 @@ import java.time.LocalDate
 internal class MeldekortConsumerTest {
 
     @Test
-    fun testEregCallWithExistingOrgnr() {
+    fun testGetMeldekortStatus200() {
         val meldekortConsumer = MeldekortConsumer(setupMockedClient(), Environment())
         var status: Meldekortstatus
         runBlocking {
@@ -40,7 +40,7 @@ internal class MeldekortConsumerTest {
     }
 
     @Test
-    fun testEregCallWithNonExistingOrgnr() {
+    fun testGetMeldekortStatus500() {
         val meldekortConsumer = MeldekortConsumer(setupMockedClient(success = false), Environment())
         assertThrows<RuntimeException> {
             runBlocking {
