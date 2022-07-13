@@ -8,7 +8,7 @@ import no.nav.navno.api.config.Environment
 import no.nav.navno.api.meldekort.dto.Meldekortstatus
 import java.net.URL
 
-class MeldekortConsumer(private val client: HttpClient, private val env: Environment) {
+class MeldekortConsumer(private val client: HttpClient, env: Environment) {
 
     private val meldekortStatusEndpoint = URL("${env.meldekortUrl}/api/person/meldekortstatus")
 

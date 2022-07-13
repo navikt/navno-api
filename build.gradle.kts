@@ -23,12 +23,9 @@ repositories {
 
 dependencies {
     implementation(DittNAV.Common.logging)
-    implementation(DittNAV.Common.utils)
     implementation(Jackson.dataTypeJsr310)
     implementation(Kotlinx.coroutines)
     implementation(Kotlinx.htmlJvm)
-    implementation(Ktor.auth)
-    implementation(Ktor.authJwt)
     implementation(Ktor.clientApache)
     implementation(Ktor.clientJackson)
     implementation(Ktor.clientJson)
@@ -43,6 +40,9 @@ dependencies {
     implementation(Logstash.logbackEncoder)
     implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
+    testImplementation(Ktor.clientMock)
+    testImplementation(Junit.api)
+    testImplementation(Junit.engine)
 }
 
 application {

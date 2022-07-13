@@ -1,0 +1,12 @@
+{
+  "meldekort": 0,
+  "etterregistrerteMeldekort": 0,
+  "antallGjenstaaendeFeriedager": 0,
+  "nesteMeldekort": {
+    "uke": "string",
+    "kanSendesFra": "2022-07-13",
+    "til": "2022-07-14",
+    "fra": "2022-07-15"
+  },
+  "nesteInnsendingAvMeldekort": "2022-07-16"
+}
