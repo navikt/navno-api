@@ -4,7 +4,6 @@ object DittNAV {
         private const val groupId = "com.github.navikt.dittnav-common-lib"
 
         const val logging = "$groupId:dittnav-common-logging:$version"
-        const val utils = "$groupId:dittnav-common-utils:$version"
     }
 }
 
@@ -12,6 +11,14 @@ object Jackson {
     private const val version = "2.13.3"
 
     const val dataTypeJsr310 = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$version"
+}
+
+object Junit {
+    private const val version = "5.8.2"
+
+    private const val groupId = "org.junit.jupiter"
+    const val api = "$groupId:junit-jupiter-api:$version"
+    const val engine = "$groupId:junit-jupiter-engine:$version"
 }
 
 object Kotlin {
@@ -29,8 +36,6 @@ object Ktor {
     private const val version = "1.6.8"
     private const val groupId = "io.ktor"
 
-    const val auth = "$groupId:ktor-auth:$version"
-    const val authJwt = "$groupId:ktor-auth-jwt:$version"
     const val serverNetty = "$groupId:ktor-server-netty:$version"
     const val clientApache = "$groupId:ktor-client-apache:$version"
     const val clientJson = "$groupId:ktor-client-json:$version"
@@ -38,6 +43,7 @@ object Ktor {
     const val clientJackson = "$groupId:ktor-client-jackson:$version"
     const val clientLogging = "$groupId:ktor-client-logging:$version"
     const val clientLoggingJvm = "$groupId:ktor-client-logging-jvm:$version"
+    const val clientMock = "$groupId:ktor-client-mock:$version"
     const val htmlBuilder = "$groupId:ktor-html-builder:$version"
     const val jackson = "$groupId:ktor-jackson:$version"
     const val serialization = "$groupId:ktor-serialization:$version"
