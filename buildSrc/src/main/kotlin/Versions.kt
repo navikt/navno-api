@@ -14,7 +14,7 @@ object Jackson {
 }
 
 object Junit {
-    private const val version = "5.8.2"
+    private const val version = "5.9.0"
 
     private const val groupId = "org.junit.jupiter"
     const val api = "$groupId:junit-jupiter-api:$version"
@@ -28,25 +28,30 @@ object Kotlin {
 object Kotlinx {
     private const val groupId = "org.jetbrains.kotlinx"
 
-    const val coroutines = "$groupId:kotlinx-coroutines-core:1.6.3"
-    const val htmlJvm = "$groupId:kotlinx-html-jvm:0.7.5"
+    const val coroutines = "$groupId:kotlinx-coroutines-core:1.6.4"
+    const val htmlJvm = "$groupId:kotlinx-html-jvm:0.8.0"
 }
 
 object Ktor {
-    private const val version = "1.6.8"
+    private const val version = "2.0.3"
     private const val groupId = "io.ktor"
 
     const val serverNetty = "$groupId:ktor-server-netty:$version"
+    const val serverCors = "$groupId:ktor-server-cors:$version"
+    const val serverDefaultHeaders = "$groupId:ktor-server-default-headers:$version"
+    const val serverContentNegotiation = "$groupId:ktor-server-content-negotiation:$version"
+    const val serverAuth = "$groupId:ktor-server-auth:$version"
+    const val serverCallLogging = "$groupId:ktor-server-call-logging:$version"
     const val clientApache = "$groupId:ktor-client-apache:$version"
+    const val clientContentNegotiation = "$groupId:ktor-client-content-negotiation:$version"
     const val clientJson = "$groupId:ktor-client-json:$version"
-    const val clientSerializationJvm = "$groupId:ktor-client-serialization-jvm:$version"
+    const val clientSerialization = "$groupId:ktor-client-serialization:$version"
     const val clientJackson = "$groupId:ktor-client-jackson:$version"
     const val clientLogging = "$groupId:ktor-client-logging:$version"
-    const val clientLoggingJvm = "$groupId:ktor-client-logging-jvm:$version"
     const val clientMock = "$groupId:ktor-client-mock:$version"
-    const val htmlBuilder = "$groupId:ktor-html-builder:$version"
-    const val jackson = "$groupId:ktor-jackson:$version"
-    const val serialization = "$groupId:ktor-serialization:$version"
+    const val htmlBuilder = "$groupId:ktor-server-html-builder:$version"
+    const val jackson = "$groupId:ktor-serialization-jackson:$version"
+    const val serialization = "$groupId:ktor-serialization-kotlinx-json:$version"
 }
 
 object Logback {
@@ -60,8 +65,8 @@ object Logstash {
 }
 
 object NAV {
-    private const val version = "2.1.1"
-    const val tokenValidatorKtor = "no.nav.security:token-validation-ktor:$version"
+    private const val version = "2.1.3"
+    const val tokenValidatorKtor = "no.nav.security:token-validation-ktor-v2:$version"
 }
 
 object Shadow {
@@ -70,7 +75,7 @@ object Shadow {
 }
 
 object TmsKtorTokenSupport {
-    private const val version = "2022.05.19-09.32-5076b2435b0a"
+    private const val version = "2.0.0"
     private const val groupId = "com.github.navikt.tms-ktor-token-support"
 
     const val tokendingsExchange = "$groupId:token-support-tokendings-exchange:$version"

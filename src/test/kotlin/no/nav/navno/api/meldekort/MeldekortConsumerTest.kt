@@ -4,13 +4,13 @@ import io.ktor.client.HttpClient
 import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
 import io.ktor.client.engine.mock.respondError
-import io.ktor.client.features.HttpTimeout
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
+import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.runBlocking
 import no.nav.navno.api.config.Environment
 import no.nav.navno.api.config.jsonConfig
@@ -65,8 +65,8 @@ internal class MeldekortConsumerTest {
                     }
                 }
             }
-            install(JsonFeature) {
-                serializer = KotlinxSerializer(jsonConfig())
+            install(ContentNegotiation) {
+                json(jsonConfig())
             }
             install(HttpTimeout)
             expectSuccess = false

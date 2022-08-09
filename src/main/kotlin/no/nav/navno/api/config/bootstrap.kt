@@ -1,23 +1,23 @@
 package no.nav.navno.api.config
 
-import io.ktor.application.Application
-import io.ktor.application.ApplicationStopping
-import io.ktor.application.install
-import io.ktor.auth.Authentication
-import io.ktor.auth.authenticate
 import io.ktor.client.HttpClient
-import io.ktor.features.CORS
-import io.ktor.features.CallLogging
-import io.ktor.features.ContentNegotiation
-import io.ktor.features.DefaultHeaders
 import io.ktor.http.HttpHeaders
-import io.ktor.request.httpMethod
-import io.ktor.request.path
-import io.ktor.routing.routing
-import io.ktor.serialization.json
+import io.ktor.serialization.kotlinx.json.json
+import io.ktor.server.application.Application
+import io.ktor.server.application.ApplicationStopping
+import io.ktor.server.application.install
+import io.ktor.server.auth.Authentication
+import io.ktor.server.auth.authenticate
+import io.ktor.server.plugins.callloging.CallLogging
+import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.server.plugins.cors.routing.CORS
+import io.ktor.server.plugins.defaultheaders.DefaultHeaders
+import io.ktor.server.request.httpMethod
+import io.ktor.server.request.path
+import io.ktor.server.routing.routing
 import no.nav.navno.api.health.healthApi
 import no.nav.navno.api.meldekort.meldekortApi
-import no.nav.security.token.support.ktor.tokenValidationSupport
+import no.nav.security.token.support.v2.tokenValidationSupport
 
 fun Application.mainModule(appContext: ApplicationContext = ApplicationContext()) {
     val environment = Environment()
@@ -25,9 +25,9 @@ fun Application.mainModule(appContext: ApplicationContext = ApplicationContext()
     install(DefaultHeaders)
 
     install(CORS) {
-        host(environment.corsAllowedOrigins)
+        allowHost(environment.corsAllowedOrigins)
         allowCredentials = true
-        header(HttpHeaders.ContentType)
+        allowHeader(HttpHeaders.ContentType)
     }
 
     install(ContentNegotiation) {
