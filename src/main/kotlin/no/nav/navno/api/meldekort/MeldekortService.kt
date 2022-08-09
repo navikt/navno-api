@@ -1,6 +1,6 @@
 package no.nav.navno.api.meldekort
 
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import no.nav.navno.api.config.Environment
 import no.nav.navno.api.meldekort.dto.Meldekortstatus
 import no.nav.navno.api.tokenx.TokenxService

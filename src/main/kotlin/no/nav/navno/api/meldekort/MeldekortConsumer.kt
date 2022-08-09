@@ -1,6 +1,7 @@
 package no.nav.navno.api.meldekort
 
 import io.ktor.client.HttpClient
+import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.request.url
@@ -16,6 +17,6 @@ class MeldekortConsumer(private val client: HttpClient, env: Environment) {
         return client.get {
             url(meldekortStatusEndpoint)
             header("TokenXAuthorization", "Bearer $accessToken")
-        }
+        }.body()
     }
 }
