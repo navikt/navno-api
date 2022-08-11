@@ -33,7 +33,6 @@ internal class MeldekortConsumerTest {
         }
         assertEquals(0, status.meldekort)
         assertEquals(0, status.etterregistrerteMeldekort)
-        assertEquals(0, status.antallGjenstaaendeFeriedager)
         assertEquals(LocalDate.of(2022, 7, 13), status.nesteMeldekort?.kanSendesFra)
         assertEquals(LocalDate.of(2022, 7, 14), status.nesteMeldekort?.til)
         assertEquals(LocalDate.of(2022, 7, 15), status.nesteMeldekort?.fra)
