@@ -43,6 +43,7 @@ dependencies {
     implementation(Logstash.logbackEncoder)
     implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
+    testImplementation(Mockk.mockk)
     testImplementation(Ktor.clientMock)
     testImplementation(Ktor.serverTestHost)
     testImplementation(Junit.api)
@@ -50,7 +51,7 @@ dependencies {
 }
 
 application {
-    mainClassName = "io.ktor.server.netty.EngineMain"
+    mainClass.set("io.ktor.server.netty.EngineMain")
 }
 
 tasks {

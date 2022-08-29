@@ -64,6 +64,11 @@ object Logstash {
     const val logbackEncoder = "net.logstash.logback:logstash-logback-encoder:$version"
 }
 
+object Mockk {
+    private const val version = "1.12.7"
+    const val mockk = "io.mockk:mockk:$version"
+}
+
 object NAV {
     private const val version = "2.1.3"
     const val tokenValidatorKtor = "no.nav.security:token-validation-ktor-v2:$version"
