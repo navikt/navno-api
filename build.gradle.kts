@@ -40,7 +40,6 @@ dependencies {
     implementation(Ktor.serverCallLogging)
     implementation(Ktor.serialization)
     implementation(Logback.classic)
-    implementation(Logstash.logbackEncoder)
     implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
     testImplementation(Mockk.mockk)

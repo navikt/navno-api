@@ -55,13 +55,8 @@ object Ktor {
 }
 
 object Logback {
-    private const val version = "1.4.0"
+    private const val version = "1.2.11" // Logger tilsynelatende ingenting med versjon 1.4.0
     const val classic = "ch.qos.logback:logback-classic:$version"
-}
-
-object Logstash {
-    private const val version = "7.2"
-    const val logbackEncoder = "net.logstash.logback:logstash-logback-encoder:$version"
 }
 
 object Mockk {
