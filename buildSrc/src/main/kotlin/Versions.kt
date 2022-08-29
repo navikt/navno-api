@@ -1,3 +1,10 @@
+object Auth0 {
+    private const val version = "4.0.0"
+    private const val groupId = "com.auth0"
+
+    const val jwt = "$groupId:java-jwt:$version"
+}
+
 object DittNAV {
     object Common {
         private const val version = "2022.04.19-11.11-1043a85c4f6f"
@@ -5,12 +12,6 @@ object DittNAV {
 
         const val logging = "$groupId:dittnav-common-logging:$version"
     }
-}
-
-object Jackson {
-    private const val version = "2.13.3"
-
-    const val dataTypeJsr310 = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$version"
 }
 
 object Junit {
@@ -46,12 +47,11 @@ object Ktor {
     const val clientContentNegotiation = "$groupId:ktor-client-content-negotiation:$version"
     const val clientJson = "$groupId:ktor-client-json:$version"
     const val clientSerialization = "$groupId:ktor-client-serialization:$version"
-    const val clientJackson = "$groupId:ktor-client-jackson:$version"
     const val clientLogging = "$groupId:ktor-client-logging:$version"
     const val clientMock = "$groupId:ktor-client-mock:$version"
     const val htmlBuilder = "$groupId:ktor-server-html-builder:$version"
-    const val jackson = "$groupId:ktor-serialization-jackson:$version"
     const val serialization = "$groupId:ktor-serialization-kotlinx-json:$version"
+    const val serverTestHost = "$groupId:ktor-server-test-host:$version"
 }
 
 object Logback {

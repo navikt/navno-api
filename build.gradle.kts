@@ -22,18 +22,16 @@ repositories {
 }
 
 dependencies {
+    implementation(Auth0.jwt)
     implementation(DittNAV.Common.logging)
-    implementation(Jackson.dataTypeJsr310)
     implementation(Kotlinx.coroutines)
     implementation(Kotlinx.htmlJvm)
     implementation(Ktor.clientApache)
     implementation(Ktor.clientContentNegotiation)
-    implementation(Ktor.clientJackson)
     implementation(Ktor.clientJson)
     implementation(Ktor.clientLogging)
     implementation(Ktor.clientSerialization)
     implementation(Ktor.htmlBuilder)
-    implementation(Ktor.jackson)
     implementation(Ktor.serverNetty)
     implementation(Ktor.serverCors)
     implementation(Ktor.serverDefaultHeaders)
@@ -46,6 +44,7 @@ dependencies {
     implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
     testImplementation(Ktor.clientMock)
+    testImplementation(Ktor.serverTestHost)
     testImplementation(Junit.api)
     testImplementation(Junit.engine)
 }
