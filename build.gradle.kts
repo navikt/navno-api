@@ -39,6 +39,8 @@ dependencies {
     implementation(Ktor.serverAuth)
     implementation(Ktor.serverCallLogging)
     implementation(Ktor.serialization)
+    implementation(Ktor.metricsMicrometer)
+    implementation(Micrometer.registryPrometheus)
     implementation(Logback.classic)
     implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
