@@ -13,7 +13,7 @@ class LocalDateSerializer : KSerializer<LocalDate> {
 
     override fun deserialize(decoder: Decoder): LocalDate {
         val value = decoder.decodeString()
-        return LocalDate.parse(value, DateTimeFormatter.ISO_DATE_TIME)
+        return LocalDate.parse(value, DateTimeFormatter.ISO_DATE)
     }
 
     override fun serialize(encoder: Encoder, value: LocalDate) {
