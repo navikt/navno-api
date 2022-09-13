@@ -4,9 +4,9 @@
   "antallGjenstaaendeFeriedager": 0,
   "nesteMeldekort": {
     "uke": "string",
-    "kanSendesFra": "2022-07-13T12:00:00+02:00",
+    "kanSendesFra": "2022-07-13",
     "til": "2022-07-14T12:00:00+02:00",
-    "fra": "2022-07-15T12:00:00+02:00"
+    "fra": "2022-07-15"
   },
   "nesteInnsendingAvMeldekort": "2022-07-16T12:00:00+02:00"
 }

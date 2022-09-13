@@ -8,12 +8,17 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import java.time.format.DateTimeParseException
 
 class LocalDateSerializer : KSerializer<LocalDate> {
 
     override fun deserialize(decoder: Decoder): LocalDate {
         val value = decoder.decodeString()
-        return LocalDate.parse(value, DateTimeFormatter.ISO_DATE_TIME)
+        return try { // Midlertidig løsning for å støtte begge format i overgang
+            LocalDate.parse(value, DateTimeFormatter.ISO_DATE_TIME)
+        } catch (e: DateTimeParseException) {
+            LocalDate.parse(value, DateTimeFormatter.ISO_DATE)
+        }
     }
 
     override fun serialize(encoder: Encoder, value: LocalDate) {
