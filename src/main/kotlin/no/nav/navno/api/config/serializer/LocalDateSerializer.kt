@@ -18,7 +18,8 @@ class LocalDateSerializer : KSerializer<LocalDate> {
             LocalDate.parse(value, DateTimeFormatter.ISO_DATE_TIME)
         } catch (e: DateTimeParseException) {
             LocalDate.parse(value, DateTimeFormatter.ISO_DATE)
-        }    }
+        }
+    }
 
     override fun serialize(encoder: Encoder, value: LocalDate) {
         encoder.encodeString(value.format(DateTimeFormatter.ISO_DATE))
