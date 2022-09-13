@@ -17,7 +17,7 @@ fun Route.meldekortApi(meldekortService: MeldekortService) {
 
             call.respond(meldekortStatus)
         } catch (e: Exception) {
-            log.error("Det skjedde en feil mot meldekort. Feilmelding: [${e.message}]", e)
+            log.error("Noe gikk galt ved henting av meldekort", e)
             call.respond(HttpStatusCode.InternalServerError)
         }
     }
