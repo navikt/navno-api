@@ -23,7 +23,6 @@ repositories {
 
 dependencies {
     implementation(Auth0.jwt)
-    implementation(DittNAV.Common.logging)
     implementation(Kotlinx.coroutines)
     implementation(Kotlinx.htmlJvm)
     implementation(Ktor.clientApache)

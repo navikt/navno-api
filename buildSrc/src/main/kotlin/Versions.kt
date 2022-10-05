@@ -5,15 +5,6 @@ object Auth0 {
     const val jwt = "$groupId:java-jwt:$version"
 }
 
-object DittNAV {
-    object Common {
-        private const val version = "2022.04.19-11.11-1043a85c4f6f"
-        private const val groupId = "com.github.navikt.dittnav-common-lib"
-
-        const val logging = "$groupId:dittnav-common-logging:$version"
-    }
-}
-
 object Junit {
     private const val version = "5.9.1"
 
@@ -56,7 +47,7 @@ object Ktor {
 }
 
 object Logback {
-    private const val version = "1.2.11" // Logger tilsynelatende ingenting med versjon 1.4.0
+    private const val version = "1.4.3"
     const val classic = "ch.qos.logback:logback-classic:$version"
 }
 
