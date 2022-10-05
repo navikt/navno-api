@@ -56,7 +56,7 @@ object Ktor {
 }
 
 object Logback {
-    private const val version = "1.4.3" // Logger tilsynelatende ingenting med versjon 1.4.0
+    private const val version = "1.2.11" // Logger tilsynelatende ingenting med versjon 1.4.0
     const val classic = "ch.qos.logback:logback-classic:$version"
 }
 
