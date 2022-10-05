@@ -41,6 +41,7 @@ dependencies {
     implementation(Ktor.metricsMicrometer)
     implementation(Micrometer.registryPrometheus)
     implementation(Logback.classic)
+    implementation(Logstash.logbackEncoder)
     implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
     testImplementation(Mockk.mockk)

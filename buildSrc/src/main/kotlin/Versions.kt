@@ -51,6 +51,13 @@ object Logback {
     const val classic = "ch.qos.logback:logback-classic:$version"
 }
 
+object Logstash {
+    private const val version = "7.2"
+    private const val groupId = "net.logstash.logback"
+
+    const val logbackEncoder = "$groupId:logstash-logback-encoder:$version"
+}
+
 object Micrometer {
     private const val version = "1.9.4"
     const val registryPrometheus = "io.micrometer:micrometer-registry-prometheus:$version"
