@@ -69,7 +69,7 @@ object Mockk {
 }
 
 object NAV {
-    private const val version = "2.1.8"
+    private const val version = "2.1.6"
     const val tokenValidatorKtor = "no.nav.security:token-validation-ktor-v2:$version"
 }
 
