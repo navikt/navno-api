@@ -1,5 +1,5 @@
 object Auth0 {
-    private const val version = "4.1.0"
+    private const val version = "4.2.1"
     private const val groupId = "com.auth0"
 
     const val jwt = "$groupId:java-jwt:$version"
@@ -25,7 +25,7 @@ object Kotlinx {
 }
 
 object Ktor {
-    private const val version = "2.1.2"
+    private const val version = "2.1.3"
     private const val groupId = "io.ktor"
 
     const val metricsMicrometer = "$groupId:ktor-server-metrics-micrometer:$version"
@@ -59,7 +59,7 @@ object Logstash {
 }
 
 object Micrometer {
-    private const val version = "1.9.5"
+    private const val version = "1.10.0"
     const val registryPrometheus = "io.micrometer:micrometer-registry-prometheus:$version"
 }
 
@@ -69,7 +69,7 @@ object Mockk {
 }
 
 object NAV {
-    private const val version = "2.1.6"
+    private const val version = "2.1.8"
     const val tokenValidatorKtor = "no.nav.security:token-validation-ktor-v2:$version"
 }
 
@@ -86,6 +86,6 @@ object TmsKtorTokenSupport {
 }
 
 object Versions {
-    const val version = "0.43.0"
+    const val version = "0.44.0"
     const val pluginId = "com.github.ben-manes.versions"
 }
