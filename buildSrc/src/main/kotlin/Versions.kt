@@ -25,6 +25,7 @@ object Kotlinx {
 }
 
 object Ktor {
+    // 2.1.3 breaks
     private const val version = "2.1.2"
     private const val groupId = "io.ktor"
 
@@ -69,6 +70,7 @@ object Mockk {
 }
 
 object NAV {
+    // 2.1.8 breaks
     private const val version = "2.1.6"
     const val tokenValidatorKtor = "no.nav.security:token-validation-ktor-v2:$version"
 }
