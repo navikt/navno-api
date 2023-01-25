@@ -44,6 +44,7 @@ dependencies {
     implementation(Logstash.logbackEncoder)
     implementation(NAV.tokenValidatorKtor)
     implementation(TmsKtorTokenSupport.tokendingsExchange)
+    implementation(TmsKtorTokenSupport.idportenSidecar)
     testImplementation(Mockk.mockk)
     testImplementation(Ktor.clientMock)
     testImplementation(Ktor.serverTestHost)

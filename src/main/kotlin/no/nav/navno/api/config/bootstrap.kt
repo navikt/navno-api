@@ -6,7 +6,6 @@ import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.Application
 import io.ktor.server.application.ApplicationStopping
 import io.ktor.server.application.install
-import io.ktor.server.auth.Authentication
 import io.ktor.server.auth.authenticate
 import io.ktor.server.metrics.micrometer.MicrometerMetrics
 import io.ktor.server.plugins.callloging.CallLogging
@@ -18,7 +17,8 @@ import io.ktor.server.request.path
 import io.ktor.server.routing.routing
 import no.nav.navno.api.health.health
 import no.nav.navno.api.meldekort.meldekortApi
-import no.nav.security.token.support.v2.tokenValidationSupport
+import no.nav.tms.token.support.idporten.sidecar.LoginLevel
+import no.nav.tms.token.support.idporten.sidecar.installIdPortenAuth
 
 fun Application.mainModule(appContext: ApplicationContext = ApplicationContext()) {
     val environment = Environment()
@@ -49,10 +49,15 @@ fun Application.mainModule(appContext: ApplicationContext = ApplicationContext()
         }
     }
 
-    val conf = this.environment.config
-    install(Authentication) {
-        tokenValidationSupport(config = conf)
+    installIdPortenAuth {
+        setAsDefault = true
+        loginLevel = LoginLevel.LEVEL_3
     }
+
+    // val conf = this.environment.config
+    // install(Authentication) {
+    //     tokenValidationSupport(config = conf)
+    // }
 
     routing {
         health(appContext.appMicrometerRegistry)

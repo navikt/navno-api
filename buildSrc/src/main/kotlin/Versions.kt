@@ -83,6 +83,7 @@ object TmsKtorTokenSupport {
     private const val groupId = "com.github.navikt.tms-ktor-token-support"
 
     const val tokendingsExchange = "$groupId:token-support-tokendings-exchange:$version"
+    const val idportenSidecar = "$groupId:token-support-idporten-sidecar:$version"
 }
 
 object Versions {
