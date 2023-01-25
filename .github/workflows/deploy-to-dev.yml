@@ -35,7 +35,7 @@ jobs:
           docker build -t ${{ env.version }} .
           docker push ${{ env.version }}
       - name: Deploy to dev-gcp
-        uses: nais/deploy/actions/deploy@master
+        uses: nais/deploy/actions/deploy@v1
         env:
           CLUSTER: dev-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
