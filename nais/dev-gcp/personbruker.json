@@ -1,5 +1,7 @@
 {
   "ingresses": [
     "https://www.dev.nav.no/person/navno-api"
-  ]
+  ],
+  "min-replicas": 1,
+  "max-replicas": 1
 }
