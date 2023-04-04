@@ -1,5 +1,5 @@
 object Auth0 {
-    private const val version = "4.3.0"
+    private const val version = "4.4.0"
     private const val groupId = "com.auth0"
 
     const val jwt = "$groupId:java-jwt:$version"
@@ -14,7 +14,7 @@ object Junit {
 }
 
 object Kotlin {
-    const val version = "1.8.10"
+    const val version = "1.8.20"
 }
 
 object Kotlinx {
@@ -69,12 +69,12 @@ object Mockk {
 }
 
 object NAV {
-    private const val version = "3.0.8"
+    private const val version = "3.0.9"
     const val tokenValidatorKtor = "no.nav.security:token-validation-ktor-v2:$version"
 }
 
 object Shadow {
-    const val version = "8.1.0"
+    const val version = "8.1.1"
     const val pluginId = "com.github.johnrengelman.shadow"
 }
 
