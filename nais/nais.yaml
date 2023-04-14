@@ -24,13 +24,13 @@ spec:
   tokenx:
     enabled: true
   accessPolicy:
-    rules:
-      - application: meldekort-api
-        namespace: meldekort
+    outbound:
+      external:
+        - host: {{ meldekort-api-host }}
   ingresses:
-  {{#each ingresses}}
-     - "{{this}}"
-         {{/each}}
+    {{#each ingresses}}
+    - {{this}}
+    {{/each}}
   envFrom:
     - configmap: loginservice-idporten
     - secret: navno-api-secret

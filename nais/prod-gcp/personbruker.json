@@ -3,5 +3,6 @@
     "https://www.nav.no/person/navno-api"
   ],
   "min-replicas": 2,
-  "max-replicas": 4
+  "max-replicas": 4,
+  "meldekort-api-host": "meldekort-api.nav.no"
 }
