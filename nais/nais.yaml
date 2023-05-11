@@ -36,7 +36,6 @@ spec:
     - {{this}}
     {{/each}}
   envFrom:
-    - configmap: loginservice-idporten
     - secret: navno-api-secret
   resources:
     limits:
