@@ -14,18 +14,18 @@ object Junit {
 }
 
 object Kotlin {
-    const val version = "1.8.20"
+    const val version = "1.8.21"
 }
 
 object Kotlinx {
     private const val groupId = "org.jetbrains.kotlinx"
 
-    const val coroutines = "$groupId:kotlinx-coroutines-core:1.6.4"
-    const val htmlJvm = "$groupId:kotlinx-html-jvm:0.8.0"
+    const val coroutines = "$groupId:kotlinx-coroutines-core:1.7.1"
+    const val htmlJvm = "$groupId:kotlinx-html-jvm:0.8.1"
 }
 
 object Ktor {
-    private const val version = "2.2.4"
+    private const val version = "2.3.0"
     private const val groupId = "io.ktor"
 
     const val metricsMicrometer = "$groupId:ktor-server-metrics-micrometer:$version"
@@ -47,7 +47,7 @@ object Ktor {
 }
 
 object Logback {
-    private const val version = "1.4.6"
+    private const val version = "1.4.7"
     const val classic = "ch.qos.logback:logback-classic:$version"
 }
 
@@ -59,17 +59,17 @@ object Logstash {
 }
 
 object Micrometer {
-    private const val version = "1.10.5"
+    private const val version = "1.11.0"
     const val registryPrometheus = "io.micrometer:micrometer-registry-prometheus:$version"
 }
 
 object Mockk {
-    private const val version = "1.13.4"
+    private const val version = "1.13.5"
     const val mockk = "io.mockk:mockk:$version"
 }
 
 object NAV {
-    private const val version = "3.0.9"
+    private const val version = "3.1.0"
     const val tokenValidatorKtor = "no.nav.security:token-validation-ktor-v2:$version"
 }
 

@@ -23,6 +23,10 @@ spec:
   webproxy: true
   tokenx:
     enabled: true
+  idporten:
+    enabled: true
+    sidecar:
+      enabled: true
   accessPolicy:
     outbound:
       external:
@@ -32,7 +36,6 @@ spec:
     - {{this}}
     {{/each}}
   envFrom:
-    - configmap: loginservice-idporten
     - secret: navno-api-secret
   resources:
     limits:
