@@ -35,7 +35,7 @@ dependencies {
         val logback = "1.4.11"
         val logstash = "7.4"
         val navSecurity = "3.1.3"
-        val tmsKtorTokenSupport = "2.1.3"
+        val tmsKtorTokenSupport = "2.2.0"
         val mockk = "1.13.7"
         val junit = "5.10.0"
     }
