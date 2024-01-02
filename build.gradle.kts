@@ -4,7 +4,7 @@ plugins {
     val versions = object {
         val kotlin = "1.9.10"
         val shadow = "8.1.1"
-        val versions = "0.49.0"
+        val versions = "0.50.0"
     }
 
     kotlin("jvm") version(versions.kotlin)
@@ -29,15 +29,15 @@ dependencies {
     val versions = object {
         val auth0Jwt = "4.4.0"
         val kotlinxCoroutines = "1.7.3"
-        val kotlinxHtmlJvm = "0.9.1"
-        val ktor = "2.3.5"
-        val micrometer = "1.11.5"
-        val logback = "1.4.11"
+        val kotlinxHtmlJvm = "0.10.1"
+        val ktor = "2.3.7"
+        val micrometer = "1.12.1"
+        val logback = "1.4.14"
         val logstash = "7.4"
-        val navSecurity = "3.1.7"
+        val navSecurity = "3.2.0"
         val tmsKtorTokenSupport = "3.0.0"
         val mockk = "1.13.8"
-        val junit = "5.10.0"
+        val junit = "5.10.1"
     }
 
     implementation("com.auth0:java-jwt:${versions.auth0Jwt}")
