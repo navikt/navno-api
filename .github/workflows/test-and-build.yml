@@ -22,7 +22,7 @@ jobs:
         if: github.ref_name == 'main'
         uses: gradle/gradle-build-action@v3
         with:
-          dependency-graph: ${{ inputs.dependency-graph }}
+          dependency-graph: generate-and-submit
       - name: Build application
         run: |
           ./gradlew clean build
