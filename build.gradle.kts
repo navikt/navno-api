@@ -54,6 +54,7 @@ dependencies {
     implementation("io.ktor:ktor-server-default-headers:${versions.ktor}")
     implementation("io.ktor:ktor-server-content-negotiation:${versions.ktor}")
     implementation("io.ktor:ktor-server-auth:${versions.ktor}")
+    implementation("io.ktor:ktor-server-call-logging:${versions.ktor}")
     implementation("io.ktor:ktor-serialization-kotlinx-json:${versions.ktor}")
     implementation("io.ktor:ktor-server-metrics-micrometer:${versions.ktor}")
     implementation("io.micrometer:micrometer-registry-prometheus:${versions.micrometer}")
