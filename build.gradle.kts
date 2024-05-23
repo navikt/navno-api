@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     val auth0JwtVersion = "4.4.0"
-    val kotlinxCoroutinesVersion = "1.8.0"
+    val kotlinxCoroutinesVersion = "1.8.1"
     val kotlinxHtmlJvmVersion = "0.11.0"
     val ktorVersion = "2.3.10"
     val micrometerVersion = "1.12.5"
