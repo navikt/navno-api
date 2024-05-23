@@ -21,6 +21,12 @@ kotlin {
 repositories {
     mavenCentral()
     maven("https://jitpack.io")
+    maven("https://maven.pkg.github.com/navikt/tms-ktor-token-support") {
+        credentials {
+            username = System.getenv("GITHUB_ACTOR")?: "x-access-token"
+            password = System.getenv("GITHUB_TOKEN")?: project.findProperty("githubPassword") as String
+        }
+    }
 }
 
 dependencies {
@@ -32,7 +38,7 @@ dependencies {
     val logbackVersion = "1.5.6"
     val logstashVersion = "7.4"
     val navSecurityVersion = "4.1.7"
-    val tmsKtorTokenSupportVersion = "4.0.0"
+    val tmsKtorTokenSupportVersion = "4.1.1"
     val mockkVersion = "1.13.11"
     val junitVersion = "5.10.2"
 
