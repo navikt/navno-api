@@ -1,7 +1,7 @@
 package no.nav.navno.api.config
 
-import io.micrometer.prometheus.PrometheusConfig
-import io.micrometer.prometheus.PrometheusMeterRegistry
+import io.micrometer.prometheusmetrics.PrometheusConfig
+import io.micrometer.prometheusmetrics.PrometheusMeterRegistry
 import no.nav.navno.api.meldekort.MeldekortConsumer
 import no.nav.navno.api.meldekort.MeldekortService
 import no.nav.navno.api.tokenx.TokenxService
