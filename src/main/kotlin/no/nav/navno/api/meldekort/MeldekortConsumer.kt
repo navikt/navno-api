@@ -9,11 +9,11 @@ import io.ktor.client.statement.bodyAsText
 import io.ktor.http.isSuccess
 import no.nav.navno.api.config.Environment
 import no.nav.navno.api.meldekort.dto.Meldekortstatus
-import java.net.URL
+import java.net.URI
 
 class MeldekortConsumer(private val client: HttpClient, env: Environment) {
 
-    private val meldekortStatusEndpoint = URL("${env.meldekortUrl}/api/person/meldekortstatus")
+    private val meldekortStatusEndpoint = URI("${env.meldekortUrl}/api/person/meldekortstatus").toURL()
 
     suspend fun getMeldekortStatus(accessToken: String): Meldekortstatus {
         val response = client.get {
