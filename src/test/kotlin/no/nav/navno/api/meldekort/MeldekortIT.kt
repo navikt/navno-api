@@ -1,35 +1,34 @@
 package no.nav.navno.api.meldekort
 
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.kotest.assertions.json.shouldEqualJson
+import io.kotest.matchers.shouldBe
+import io.ktor.client.statement.bodyAsText
 import io.ktor.http.HttpStatusCode
-import io.ktor.serialization.kotlinx.json.json
 import no.nav.navno.api.IntegrationTest
 import no.nav.navno.api.config.setupMockedClient
-import org.junit.jupiter.api.Assertions.assertEquals
+import no.nav.navno.api.testutils.readJsonFile
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestInstance
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-internal class MeldekortIT : IntegrationTest() {
-
-    val HENT_MELDEKORTSTATUS_PATH = "meldekortstatus"
+class MeldekortIT : IntegrationTest() {
 
     @Test
     fun testGetMeldekortStatus200() = integrationTest(setupMockedClient()) {
-        val client = createClient { install(ContentNegotiation) { json() } }
-        val response = get(client, HENT_MELDEKORTSTATUS_PATH)
+        val response = get(HENT_MELDEKORTSTATUS_PATH)
 
-        assertEquals(HttpStatusCode.OK, response.status)
+        response.status shouldBe HttpStatusCode.OK
+        response.bodyAsText() shouldEqualJson readJsonFile("/json/expected-response/meldekortstatus.json")
     }
 
     @Test
     fun testGetMeldekortStatus500() {
         integrationTest(setupMockedClient(meldekortStatus = HttpStatusCode.InternalServerError)) {
-            val client = createClient { install(ContentNegotiation) { json() } }
+            val response = get(HENT_MELDEKORTSTATUS_PATH)
 
-            val response = get(client, HENT_MELDEKORTSTATUS_PATH)
-
-            assertEquals(HttpStatusCode.InternalServerError, response.status)
+            response.status shouldBe HttpStatusCode.InternalServerError
         }
+    }
+
+    companion object {
+        private const val HENT_MELDEKORTSTATUS_PATH = "meldekortstatus"
     }
 }

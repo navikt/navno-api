@@ -9,20 +9,15 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.kotlinx.json.json
 import no.nav.navno.api.config.mocks.mockMeldekort
 
+private const val MELDEKORT = "meldekort"
 
 fun setupMockedClient(meldekortStatus: HttpStatusCode = HttpStatusCode.OK): HttpClient {
-    val MELDEKORT = "meldekort"
-
     return HttpClient(MockEngine) {
         engine {
             addHandler { request ->
                 when (request.url.host) {
-                    MELDEKORT -> {
-                        mockMeldekort(meldekortStatus)
-                    }
-                    else -> {
-                        respondError(HttpStatusCode.NotFound)
-                    }
+                    MELDEKORT -> mockMeldekort(meldekortStatus)
+                    else -> respondError(HttpStatusCode.NotFound)
                 }
             }
 
@@ -31,10 +26,5 @@ fun setupMockedClient(meldekortStatus: HttpStatusCode = HttpStatusCode.OK): Http
             json(jsonConfig())
         }
         install(HttpTimeout)
-        expectSuccess = false
     }
-}
-
-fun readJson(name: String): String {
-    return object {}.javaClass.getResource(name)?.readText()!!
 }
