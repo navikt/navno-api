@@ -11,7 +11,6 @@ import io.ktor.http.headersOf
 import io.ktor.http.isSuccess
 import no.nav.navno.api.testutils.readJsonFile
 
-
 fun MockRequestHandleScope.mockMeldekort(status: HttpStatusCode): HttpResponseData {
     return if (status.isSuccess()) {
         respond(
