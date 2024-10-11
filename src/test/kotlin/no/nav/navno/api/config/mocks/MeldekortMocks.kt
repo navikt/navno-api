@@ -14,7 +14,7 @@ import no.nav.navno.api.testutils.readJsonFile
 fun MockRequestHandleScope.mockMeldekort(status: HttpStatusCode): HttpResponseData {
     return if (status.isSuccess()) {
         respond(
-            content = readJsonFile("/json/meldekortstatus.json"),
+            content = readJsonFile("/json/mocks/meldekortstatus.json"),
             headers = headersOf(HttpHeaders.ContentType, ContentType.Application.Json.toString())
         )
     } else {
