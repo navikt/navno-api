@@ -18,12 +18,16 @@ class MeldekortConsumer(private val client: HttpClient, env: Environment) {
     suspend fun getMeldekortStatus(accessToken: String): Meldekortstatus {
         val response = client.get {
             url(meldekortStatusEndpoint)
-            header("TokenXAuthorization", "Bearer $accessToken")
+            header(TOKEN_X_AUTHORIATION_HEADER, "Bearer $accessToken")
         }
         return if (response.status.isSuccess()) {
             response.body()
         } else {
             throw RuntimeException("Feil i kall mot ekstern tjeneste - endepunkt=[$meldekortStatusEndpoint], HTTP response status=[${response.status}], feilmelding=[${response.bodyAsText()}]")
         }
+    }
+
+    companion object {
+        private const val TOKEN_X_AUTHORIATION_HEADER = "TokenXAuthorization"
     }
 }
