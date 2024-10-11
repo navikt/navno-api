@@ -4,7 +4,7 @@ import io.ktor.server.application.ApplicationCall
 import no.nav.navno.api.config.Environment
 import no.nav.navno.api.meldekort.dto.Meldekortstatus
 import no.nav.navno.api.tokenx.TokenxService
-import no.nav.navno.api.util.getAuthTokenFromRequest
+import no.nav.navno.api.utils.getAuthTokenFromRequest
 
 class MeldekortService(
     private val tokenxService: TokenxService,

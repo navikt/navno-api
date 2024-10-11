@@ -1,4 +1,4 @@
-package no.nav.navno.api.util
+package no.nav.navno.api.utils
 
 import io.ktor.server.request.ApplicationRequest
 import io.ktor.server.request.authorization
