@@ -3,11 +3,11 @@ package no.nav.navno.api.config
 import io.ktor.client.HttpClient
 import no.nav.navno.api.meldekort.MeldekortConsumer
 import no.nav.navno.api.meldekort.MeldekortService
-import no.nav.navno.api.tokenx.TokenxService
+import no.nav.tms.token.support.tokendings.exchange.TokendingsService
 
 class TestApplicationContext(
     httpClient: HttpClient,
-    tokenxService: TokenxService = TokenxService(DummyTokendingsService())
+    tokendingsService: TokendingsService = DummyTokendingsService()
 ) {
     val environment = Environment(
         corsAllowedOrigins = "",
@@ -16,5 +16,5 @@ class TestApplicationContext(
     )
 
     val meldekortConsumer = MeldekortConsumer(httpClient, environment)
-    val meldekortService = MeldekortService(tokenxService, meldekortConsumer, environment)
+    val meldekortService = MeldekortService(tokendingsService, meldekortConsumer, environment)
 }
