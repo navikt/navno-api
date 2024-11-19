@@ -34,13 +34,13 @@ dependencies {
     val kotlinxCoroutinesVersion = "1.8.1"
     val kotlinxHtmlJvmVersion = "0.11.0"
     val ktorVersion = "2.3.11"
-    val micrometerVersion = "1.13.0"
-    val logbackVersion = "1.5.6"
-    val logstashVersion = "7.4"
+    val micrometerVersion = "1.14.1"
+    val logbackVersion = "1.5.12"
+    val logstashVersion = "8.0"
     val navSecurityVersion = "4.1.7"
     val tmsKtorTokenSupportVersion = "4.1.1"
-    val mockkVersion = "1.13.11"
-    val junitVersion = "5.10.2"
+    val mockkVersion = "1.13.13"
+    val junitVersion = "5.11.3"
 
     implementation("com.auth0:java-jwt:$auth0JwtVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion")
