@@ -31,14 +31,14 @@ repositories {
 
 dependencies {
     val auth0JwtVersion = "4.4.0"
-    val junitVersion = "5.11.2"
     val kotlinxCoroutinesVersion = "1.9.0"
     val kotlinxHtmlJvmVersion = "0.11.0"
     val ktorVersion = "2.3.11"
-    val logbackVersion = "1.5.9"
+    val micrometerVersion = "1.14.1"
+    val logbackVersion = "1.5.12"
     val logstashVersion = "8.0"
-    val micrometerVersion = "1.13.5"
     val mockkVersion = "1.13.13"
+    val junitVersion = "5.11.3"
     val navSecurityVersion = "5.0.5"
     val tmsKtorTokenSupportVersion = "4.1.2"
     val kotestVersion = "5.9.1"
