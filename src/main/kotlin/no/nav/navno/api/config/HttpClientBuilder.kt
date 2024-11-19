@@ -23,7 +23,6 @@ object HttpClientBuilder {
                 requestTimeoutMillis = 5000
                 connectTimeoutMillis = 2000
             }
-            expectSuccess = false
         }
     }
 

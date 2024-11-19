@@ -31,16 +31,17 @@ repositories {
 
 dependencies {
     val auth0JwtVersion = "4.4.0"
-    val kotlinxCoroutinesVersion = "1.8.1"
+    val kotlinxCoroutinesVersion = "1.9.0"
     val kotlinxHtmlJvmVersion = "0.11.0"
     val ktorVersion = "2.3.11"
     val micrometerVersion = "1.14.1"
     val logbackVersion = "1.5.12"
     val logstashVersion = "8.0"
-    val navSecurityVersion = "4.1.7"
-    val tmsKtorTokenSupportVersion = "4.1.1"
     val mockkVersion = "1.13.13"
     val junitVersion = "5.11.3"
+    val navSecurityVersion = "5.0.5"
+    val tmsKtorTokenSupportVersion = "4.1.2"
+    val kotestVersion = "5.9.1"
 
     implementation("com.auth0:java-jwt:$auth0JwtVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion")
@@ -69,6 +70,8 @@ dependencies {
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+    testImplementation("io.kotest:kotest-assertions-json:$kotestVersion")
 }
 
 application {

@@ -10,7 +10,6 @@ import io.ktor.server.request.path
 import io.ktor.server.routing.routing
 import no.nav.navno.api.meldekort.meldekortApi
 
-
 fun Application.testModule(appContext: TestApplicationContext) {
 
     install(ContentNegotiation) {
