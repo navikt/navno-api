@@ -29,8 +29,9 @@ spec:
       enabled: true
   accessPolicy:
     outbound:
-      external:
+      rules:
         - host: {{ meldekort-api-host }}
+          namespace: meldekort
   ingresses:
     {{#each ingresses}}
     - {{this}}
