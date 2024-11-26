@@ -30,7 +30,7 @@ spec:
   accessPolicy:
     outbound:
       rules:
-        - host: {{ meldekort-api-host }}
+        - application: {{ meldekort-api-host }}
           namespace: meldekort
   ingresses:
     {{#each ingresses}}
