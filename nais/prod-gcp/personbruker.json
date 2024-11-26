@@ -4,5 +4,5 @@
   ],
   "min-replicas": 2,
   "max-replicas": 4,
-  "meldekort-api-host": "meldekort-api.nav.no"
+  "meldekort-api-name": "meldekort-api"
 }
