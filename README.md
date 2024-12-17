@@ -1,6 +1,6 @@
 # Navno-API
 
-[Deploy-to-prod](https://github.com/navikt/navno-api/workflows/Deploy-to-prod) | [Deploy-to-dev](https://github.com/navikt/navno-api/workflows/Deploy-to-dev)
+[Deploy-to-prod](https://github.com/navikt/navno-api/workflows/deploy-to-prod.yml) | [Deploy-to-dev](https://github.com/navikt/navno-api/workflows/deploy-to-dev.yml)
 
 Ktor-backend som skal gi brukertilpasset innhold til forsiden på nav.no.
 
