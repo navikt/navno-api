@@ -1,10 +1,10 @@
 # Navno-API
 
-![Deploy-to-prod](https://github.com/navikt/navno-api/workflows/Deploy-to-prod/badge.svg) | ![Deploy-to-dev](https://github.com/navikt/navno-api/workflows/Deploy-to-dev/badge.svg)
+[Deploy-to-prod](https://github.com/navikt/navno-api/workflows/Deploy-to-prod) | [Deploy-to-dev](https://github.com/navikt/navno-api/workflows/Deploy-to-dev)
 
 Ktor-backend som skal gi brukertilpasset innhold til forsiden på nav.no.
 
-Secrets ligger i [Google Secret Manager](https://doc.nais.io/security/secrets/google-secrets-manager/).
+Secrets ligger i [Nais console](https://console.nav.cloud.nais.io/team/personbruker/secrets).
 
 ## Lokal kjøring
 
