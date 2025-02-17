@@ -1,3 +1,5 @@
+# DEPRECATED 17-02-25
+
 # Navno-API
 
 [Deploy-to-prod](https://github.com/navikt/navno-api/actions/workflows/deploy-to-prod.yml) | [Deploy-to-dev](https://github.com/navikt/navno-api/actions/workflows/deploy-to-dev.yml)
